@@ -26,6 +26,9 @@ public class Usuario {
     @Column(name = "rol")
     private String rol;
 
+    @Column(name = "status")
+    private String status;
+
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "programa_educativo")
     @JsonManagedReference
     private List<ProgramaEducativoDTO> programasEducativos;
